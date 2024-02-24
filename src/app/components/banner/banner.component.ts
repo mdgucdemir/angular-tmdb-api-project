@@ -18,7 +18,6 @@ export class BannerComponent implements OnInit {
 
   ngOnInit(): void {
     this.baseService.getReq('/movie/upcoming').subscribe((res) => {
-      console.log(res.results);
       this.bannerData = res.results;
     });
   }

@@ -22,6 +22,12 @@ register();
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { BannerComponent } from './components/banner/banner.component';
+import { PopularComponent } from './pages/home/movies/popular/popular.component';
+import { TopRatedComponent } from './pages/home/movies/top-rated/top-rated.component';
+import { UpComingComponent } from './pages/home/movies/up-coming/up-coming.component';
+import { NowPlayingComponent } from './pages/home/movies/now-playing/now-playing.component';
+import { AiringTodayComponent } from './pages/home/tv/airing-today/airing-today.component';
+import { OnAirComponent } from './pages/home/tv/on-air/on-air.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +39,12 @@ import { BannerComponent } from './components/banner/banner.component';
     HeaderComponent,
     FooterComponent,
     BannerComponent,
+    PopularComponent,
+    TopRatedComponent,
+    UpComingComponent,
+    NowPlayingComponent,
+    AiringTodayComponent,
+    OnAirComponent,
   ],
   imports: [
     BrowserModule,
