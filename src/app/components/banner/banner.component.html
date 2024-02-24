@@ -1,0 +1,17 @@
+<div class="banner">
+  <swiper-container
+    class="swiper-container"
+    slides-per-view="1"
+    speed="500"
+    loop="true"
+    navigation="true"
+    pagination="true"
+  >
+    <swiper-slide class="swiper-slide" *ngFor="let banner of bannerData">
+      <img
+        [src]="bannerImage.originalImage(banner.backdrop_path)"
+        class="banner-img"
+      />
+    </swiper-slide>
+  </swiper-container>
+</div>
