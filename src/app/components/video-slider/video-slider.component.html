@@ -1,0 +1,20 @@
+<div class="movie-list">
+  <div class="movie-list-wrapper">
+    <div class="movie-list-header">{{ title }}</div>
+    <div class="movie-list-content">
+      <swiper-container slides-per-view="6" speed="500" navigation="true">
+        <swiper-slide *ngFor="let item of data; let index" class="swiper-slide">
+          <img
+            (click)="onClick()"
+            [src]="
+              dataImg.w500Image(
+                item.poster_path || item.backdrop_path || item.profile_path
+              )
+            "
+            class="image"
+          />
+        </swiper-slide>
+      </swiper-container>
+    </div>
+  </div>
+</div>

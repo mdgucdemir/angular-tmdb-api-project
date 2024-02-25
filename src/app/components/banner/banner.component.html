@@ -8,10 +8,13 @@
     pagination="true"
   >
     <swiper-slide class="swiper-slide" *ngFor="let banner of bannerData">
-      <img
-        [src]="bannerImage.originalImage(banner.backdrop_path)"
+      <div
         class="banner-img"
-      />
+        [ngStyle]="{
+          'background-image':
+            'url(' + bannerImage.originalImage(banner.backdrop_path) + ')'
+        }"
+      ></div>
     </swiper-slide>
   </swiper-container>
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiConfigService } from 'src/app/services/api-config.service';
 import { BaseService } from 'src/app/services/base.service';
 
 @Component({
@@ -7,11 +8,14 @@ import { BaseService } from 'src/app/services/base.service';
   styleUrls: ['./now-playing.component.scss'],
 })
 export class NowPlayingComponent implements OnInit {
+  title: string = 'playing now movies';
+  data: any = [];
+
   constructor(private baseService: BaseService) {}
 
   ngOnInit(): void {
-    this.baseService
-      .getReq('/movie/now_playing')
-      .subscribe((res) => console.log(res));
+    this.baseService.getReq('/movie/now_playing').subscribe((res) => {
+      this.data = res.results;
+    });
   }
 }

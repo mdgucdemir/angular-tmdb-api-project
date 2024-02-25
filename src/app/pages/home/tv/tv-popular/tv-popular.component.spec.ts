@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PopularComponent } from './popular.component';
+import { TvPopularComponent } from './tv-popular.component';
 
-describe('PopularComponent', () => {
-  let component: PopularComponent;
-  let fixture: ComponentFixture<PopularComponent>;
+describe('TvPopularComponent', () => {
+  let component: TvPopularComponent;
+  let fixture: ComponentFixture<TvPopularComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [PopularComponent]
+      declarations: [TvPopularComponent]
     });
-    fixture = TestBed.createComponent(PopularComponent);
+    fixture = TestBed.createComponent(TvPopularComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

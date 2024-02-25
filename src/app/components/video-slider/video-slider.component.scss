@@ -1,0 +1,26 @@
+.movie-list {
+  margin: 3rem 0;
+
+  .movie-list-wrapper {
+    padding: 0 3rem;
+
+    .image {
+      width: 290px;
+      height: 390px;
+      object-fit: fill;
+
+      &:hover {
+        scale: 1.3;
+        z-index: -1;
+        transition: all ease 1s;
+        cursor: pointer;
+      }
+    }
+  }
+  .movie-list-header {
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    text-transform: capitalize;
+    font-weight: 500;
+  }
+}

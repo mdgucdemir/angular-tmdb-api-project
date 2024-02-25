@@ -21,6 +21,7 @@ register();
 // Angular Material
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+//
 import { BannerComponent } from './components/banner/banner.component';
 import { PopularComponent } from './pages/home/movies/popular/popular.component';
 import { TopRatedComponent } from './pages/home/movies/top-rated/top-rated.component';
@@ -28,6 +29,10 @@ import { UpComingComponent } from './pages/home/movies/up-coming/up-coming.compo
 import { NowPlayingComponent } from './pages/home/movies/now-playing/now-playing.component';
 import { AiringTodayComponent } from './pages/home/tv/airing-today/airing-today.component';
 import { OnAirComponent } from './pages/home/tv/on-air/on-air.component';
+import { VideoSliderComponent } from './components/video-slider/video-slider.component';
+import { TvPopularComponent } from './pages/home/tv/tv-popular/tv-popular.component';
+import { TvTopRatedComponent } from './pages/home/tv/tv-top-rated/tv-top-rated.component';
+import { PopularPersonComponent } from './pages/home/person/popular-person/popular-person.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +50,10 @@ import { OnAirComponent } from './pages/home/tv/on-air/on-air.component';
     NowPlayingComponent,
     AiringTodayComponent,
     OnAirComponent,
+    VideoSliderComponent,
+    TvPopularComponent,
+    TvTopRatedComponent,
+    PopularPersonComponent,
   ],
   imports: [
     BrowserModule,
