@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiConfigService } from 'src/app/services/api-config.service';
 import { BaseService } from 'src/app/services/base.service';
 
 @Component({
@@ -10,6 +9,7 @@ import { BaseService } from 'src/app/services/base.service';
 export class PopularPersonComponent implements OnInit {
   title: string = 'popular person';
   data: any = [];
+  type: string = 'person';
 
   noPoster: string = 'assets/no-poster.png';
 
@@ -18,6 +18,7 @@ export class PopularPersonComponent implements OnInit {
   ngOnInit(): void {
     this.baseService.getReq('/person/popular').subscribe((res) => {
       this.data = res.results;
+      // console.log(this.data);
     });
   }
 }

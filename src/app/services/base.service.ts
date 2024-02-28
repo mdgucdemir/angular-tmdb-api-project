@@ -11,7 +11,7 @@ export class BaseService {
 
   constructor(public http: HttpClient) {}
 
-  getReq(url: string) {
+  getReq(url: any) {
     const reqHeader = new HttpHeaders({
       'Content-Type': 'application/json',
       Authorization: `Bearer ${this.apiKey}`,

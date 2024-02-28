@@ -9,6 +9,7 @@ import { BaseService } from 'src/app/services/base.service';
 export class UpComingComponent implements OnInit {
   title: string = 'up coming movies';
   data: any = [];
+  type: string = 'movie';
 
   constructor(private baseService: BaseService) {}
 

@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
-import { DetailsComponent } from './pages/details/details.component';
+
 import { DiscoverComponent } from './pages/discover/discover.component';
 import { SearchResultComponent } from './pages/search-result/search-result.component';
 
@@ -21,6 +21,7 @@ register();
 // Angular Material
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+
 //
 import { BannerComponent } from './components/banner/banner.component';
 import { PopularComponent } from './pages/home/movies/popular/popular.component';
@@ -33,12 +34,14 @@ import { VideoSliderComponent } from './components/video-slider/video-slider.com
 import { TvPopularComponent } from './pages/home/tv/tv-popular/tv-popular.component';
 import { TvTopRatedComponent } from './pages/home/tv/tv-top-rated/tv-top-rated.component';
 import { PopularPersonComponent } from './pages/home/person/popular-person/popular-person.component';
+import { MovieComponent } from './pages/home/movies/movie/movie.component';
+import { PersonComponent } from './pages/home/person/person/person.component';
+import { TvComponent } from './pages/home/tv/tv/tv.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    DetailsComponent,
     DiscoverComponent,
     SearchResultComponent,
     HeaderComponent,
@@ -54,6 +57,9 @@ import { PopularPersonComponent } from './pages/home/person/popular-person/popul
     TvPopularComponent,
     TvTopRatedComponent,
     PopularPersonComponent,
+    MovieComponent,
+    PersonComponent,
+    TvComponent,
   ],
   imports: [
     BrowserModule,

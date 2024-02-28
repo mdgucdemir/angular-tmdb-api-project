@@ -1,0 +1,62 @@
+<div class="person">
+  <div class="container">
+    <div class="content-wrapper">
+      <div class="row">
+        <div class="col-md-4 left-side-column">
+          <div class="image-content">
+            <div
+              class="image"
+              [style]="{
+                'background-image':
+                  'url(' +
+                  dataImg.originalImage(
+                    items.poster_path || person.profile_path
+                  ) +
+                  ')'
+              }"
+            ></div>
+          </div>
+          <div class="information">
+            <h3>Personal Info</h3>
+            <div class="personal-info">
+              <div>
+                <strong>Known For</strong>
+                <p>{{ person.known_for_department }}</p>
+              </div>
+
+              <div>
+                <strong>Birthday</strong>
+                <p>{{ person.birthday | date : "longDate" }}</p>
+              </div>
+              <div>
+                <strong>Place of Birth</strong>
+                <p>{{ person.place_of_birth }}</p>
+              </div>
+              <div>
+                <strong>Also Known As</strong>
+                <ul *ngFor="let known of person.also_known_as; let index">
+                  <li>{{ known }}</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--  -->
+        <div class="col-md-8 right-side-column">
+          <section>
+            <div class="title">
+              <h2 class="title">{{ person.name }}</h2>
+            </div>
+          </section>
+          <section class="full-wrapper">
+            <h3>Biography</h3>
+            <div class="biography">
+              <p>{{ person.biography }}</p>
+            </div>
+          </section>
+          <section></section>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

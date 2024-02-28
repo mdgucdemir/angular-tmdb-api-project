@@ -9,7 +9,7 @@ import { BaseService } from 'src/app/services/base.service';
 export class AiringTodayComponent implements OnInit {
   title: string = 'airing today tv shows';
   data: any = [];
-
+  type: string = 'tv';
   constructor(private baseService: BaseService) {}
 
   ngOnInit(): void {

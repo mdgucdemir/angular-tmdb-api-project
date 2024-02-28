@@ -10,6 +10,7 @@ import { BaseService } from 'src/app/services/base.service';
 export class NowPlayingComponent implements OnInit {
   title: string = 'playing now movies';
   data: any = [];
+  type: string = 'movie';
 
   constructor(private baseService: BaseService) {}
 

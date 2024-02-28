@@ -9,11 +9,11 @@ import { BaseService } from 'src/app/services/base.service';
 export class PopularComponent implements OnInit {
   title: string = 'popular movies';
   data: any = [];
+  type: string = 'movie';
   constructor(private baseService: BaseService) {}
   ngOnInit(): void {
     this.baseService.getReq('/movie/popular').subscribe((res) => {
       this.data = res.results;
-      // console.log(res.results);
     });
   }
 }

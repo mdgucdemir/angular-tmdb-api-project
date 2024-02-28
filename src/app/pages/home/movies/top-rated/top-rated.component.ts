@@ -9,6 +9,7 @@ import { BaseService } from 'src/app/services/base.service';
 export class TopRatedComponent implements OnInit {
   title: string = 'top rated movies';
   data: any = [];
+  type: string = 'movie';
   constructor(private baseService: BaseService) {}
 
   ngOnInit(): void {

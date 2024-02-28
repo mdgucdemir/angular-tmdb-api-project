@@ -1,0 +1,75 @@
+<div class="movie-page">
+  <div class="banner">
+    <div
+      class="banner-img"
+      [style]="{
+        'background-image':
+          'url(' + dataImg.originalImage(movie.backdrop_path) + ')'
+      }"
+    >
+      <div class="banner-wrapper">
+        <div class="banner-content">
+          <div class="movie-poster">
+            <div
+              class="poster-content"
+              [style]="{
+                'background-image':
+                  'url(' + dataImg.originalImage(movie.poster_path) + ')'
+              }"
+            ></div>
+          </div>
+          <div class="movie-content">
+            <div class="movie-content-items">
+              <div class="title">
+                <h2 class="title-header">{{ movie.title }}</h2>
+                <span class="date">{{
+                  items.release_date | date : "shortDate"
+                }}</span>
+              </div>
+              <div class="header-info">
+                <h3 class="tagline">{{ movie.tagline }}</h3>
+                <h3>Overview</h3>
+                <div class="overview">
+                  <p>{{ movie.overview }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="movie-information">
+    <div class="row">
+      <div class="col-md-10">asdf</div>
+      <div class="col-md-2">
+        <div class="movie-info-2">
+          <div>
+            <strong>Status</strong>
+            <p>{{ movie.status }}</p>
+          </div>
+          <div>
+            <strong>Release Date</strong>
+            <p>{{ movie.release_date | date : "shortDate" }}</p>
+          </div>
+          <div>
+            <strong>Budget</strong>
+            <p>{{ movie.budget | currency }}</p>
+          </div>
+          <div>
+            <strong>Revenue</strong>
+            <p>{{ movie.revenue | currency }}</p>
+          </div>
+          <div>
+            <strong>TMDB</strong>
+            <p>{{ movie.vote_average }}</p>
+          </div>
+          <div>
+            <strong>Popularity</strong>
+            <p>{{ movie.popularity }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
