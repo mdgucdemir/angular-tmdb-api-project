@@ -1,0 +1,12 @@
+.example-card {
+  background-color: rgb(238, 236, 236);
+  mat-card-header {
+    padding: 10px;
+  }
+  .card-content {
+    margin-top: 1rem;
+  }
+  img {
+    height: 60vh;
+  }
+}

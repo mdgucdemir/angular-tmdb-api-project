@@ -13,9 +13,16 @@
       // opacity: 0.7;
 
       .banner-wrapper {
-        padding: 3rem 20rem;
+        height: 100%;
+        background-image: linear-gradient(
+          to right,
+          rgba(31.5, 31.5, 31.5, 0.84) 100%,
+          rgba(31.5, 31.5, 31.5, 0.84) 50%,
+          rgba(31.5, 31.5, 31.5, 0.84) 100%
+        );
 
         .banner-content {
+          padding: 3rem 20rem;
           display: flex;
           flex-wrap: nowrap;
 
@@ -78,6 +85,14 @@
       }
       p {
         font-size: 16px;
+      }
+    }
+    .similar {
+      margin-top: 3rem;
+      .similar-header {
+        h2 {
+          font-size: 22px;
+        }
       }
     }
   }

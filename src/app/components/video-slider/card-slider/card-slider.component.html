@@ -1,0 +1,18 @@
+<swiper-container slides-per-view="7" speed="500" navigation="true">
+  <swiper-slide *ngFor="let item of data">
+    <mat-card class="card-slider">
+      <img
+        mat-card-image
+        [src]="dataImg.originalImage(item.profile_path)"
+        class="card-img"
+        loading="lazy"
+        [alt]="item.name"
+        (click)="onClick(item)"
+      />
+      <mat-card-content>
+        <p class="card-header">{{ item.original_name }}</p>
+        <p class="card-content">{{ item.character }}</p>
+      </mat-card-content>
+    </mat-card>
+  </swiper-slide>
+</swiper-container>

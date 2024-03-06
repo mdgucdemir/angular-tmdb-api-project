@@ -21,6 +21,8 @@ register();
 // Angular Material
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { MatTableModule } from '@angular/material/table';
+import { MatCardModule } from '@angular/material/card';
 
 //
 import { BannerComponent } from './components/banner/banner.component';
@@ -37,6 +39,8 @@ import { PopularPersonComponent } from './pages/home/person/popular-person/popul
 import { MovieComponent } from './pages/home/movies/movie/movie.component';
 import { PersonComponent } from './pages/home/person/person/person.component';
 import { TvComponent } from './pages/home/tv/tv/tv.component';
+import { CardSliderComponent } from './components/video-slider/card-slider/card-slider.component';
+import { SimilarSliderComponent } from './components/video-slider/similar-slider/similar-slider.component';
 
 @NgModule({
   declarations: [
@@ -60,6 +64,8 @@ import { TvComponent } from './pages/home/tv/tv/tv.component';
     MovieComponent,
     PersonComponent,
     TvComponent,
+    CardSliderComponent,
+    SimilarSliderComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,6 +74,8 @@ import { TvComponent } from './pages/home/tv/tv/tv.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
+    MatTableModule,
+    MatCardModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

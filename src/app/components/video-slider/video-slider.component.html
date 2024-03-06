@@ -6,7 +6,19 @@
         <swiper-slide *ngFor="let item of data" class="swiper-slide">
           <div class="slider-wrapper">
             <div class="slider-content">
-              <div
+              <img
+                [src]="
+                  dataImg.originalImage(
+                    item.poster_path || item.backdrop_path || item.profile_path
+                  )
+                "
+                [alt]="item.title || item.name"
+                [title]="item.title || item.name"
+                class="image"
+                (click)="onClick(item)"
+              />
+
+              <!-- <div
                 class="image"
                 (click)="onClick(item)"
                 [style]="{
@@ -19,7 +31,7 @@
                     ) +
                     ')'
                 }"
-              ></div>
+              ></div> -->
             </div>
           </div>
         </swiper-slide>

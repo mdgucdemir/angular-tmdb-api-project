@@ -41,7 +41,24 @@
   </div>
   <div class="movie-information">
     <div class="row">
-      <div class="col-md-10">asdf</div>
+      <div class="col-md-10">
+        <div class="cast">
+          <div class="cast-wrapper">
+            <div class="cast-header">
+              <h2>Top Cast</h2>
+            </div>
+            <div class="cast-content">
+              <app-card-slider [data]="castData"></app-card-slider>
+            </div>
+          </div>
+        </div>
+        <div class="similar">
+          <div class="similar-header"><h2>Similar Tv Series</h2></div>
+        </div>
+        <div class="similar-content">
+          <app-similar-slider [data]="similarData"></app-similar-slider>
+        </div>
+      </div>
       <div class="col-md-2">
         <div class="movie-info-2">
           <div>

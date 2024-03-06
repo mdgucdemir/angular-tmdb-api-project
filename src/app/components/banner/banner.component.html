@@ -14,7 +14,30 @@
           'background-image':
             'url(' + bannerImage.originalImage(banner.backdrop_path) + ')'
         }"
-      ></div>
+      >
+        <div class="banner-image-shadow">
+          <div class="banner-content">
+            <div class="row">
+              <div class="col-md-3">
+                <img
+                  [src]="bannerImage.originalImage(banner.poster_path)"
+                  alt=""
+                  class="banner-content-img"
+                />
+              </div>
+              <div class="col-md-9">
+                <div class="banner-content-info">
+                  <div class="banner-description">
+                    <h1 class="header">{{ banner.title }}</h1>
+                    <p class="overview">{{ banner.overview }}</p>
+                  </div>
+                </div>
+                <!--  -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </swiper-slide>
   </swiper-container>
 </div>
