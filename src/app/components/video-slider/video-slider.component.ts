@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiConfigService } from 'src/app/services/api-config.service';
 import { DataServiceService } from 'src/app/services/data-service.service';
@@ -11,6 +11,7 @@ import { DataServiceService } from 'src/app/services/data-service.service';
 export class VideoSliderComponent {
   dataImg: any = this.apiConfig.apiConfig;
   noPoster: any = 'assets/no-poster.png';
+  isLoading: boolean = false;
 
   constructor(
     private apiConfig: ApiConfigService,

@@ -5,14 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 
-import { DiscoverComponent } from './pages/discover/discover.component';
 import { SearchResultComponent } from './pages/search-result/search-result.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
+import { FormsModule } from '@angular/forms';
 // Swiper
 import { register } from 'swiper/element/bundle';
 // register Swiper custom elements
@@ -23,6 +22,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatTableModule } from '@angular/material/table';
 import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 //
 import { BannerComponent } from './components/banner/banner.component';
@@ -46,7 +48,7 @@ import { SimilarSliderComponent } from './components/video-slider/similar-slider
   declarations: [
     AppComponent,
     HomeComponent,
-    DiscoverComponent,
+
     SearchResultComponent,
     HeaderComponent,
     FooterComponent,
@@ -76,6 +78,10 @@ import { SimilarSliderComponent } from './components/video-slider/similar-slider
     MatButtonModule,
     MatTableModule,
     MatCardModule,
+    MatIconModule,
+    MatInputModule,
+    FormsModule,
+    MatProgressSpinnerModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
