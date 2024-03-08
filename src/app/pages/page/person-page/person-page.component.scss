@@ -10,7 +10,6 @@
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
 
       &-header {
         text-align: center;
@@ -29,6 +28,7 @@
           width: 250px;
 
           .card-img {
+            cursor: pointer;
             width: 100%;
             height: 375px;
             object-fit: cover;
@@ -51,17 +51,6 @@
             }
           }
         }
-      }
-
-      .no-results {
-        width: 100%;
-        height: 73.1vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        font-size: 3rem;
-        text-transform: capitalize;
       }
     }
   }

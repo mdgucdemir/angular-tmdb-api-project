@@ -9,7 +9,6 @@ import { ApiConfigService } from 'src/app/services/api-config.service';
 })
 export class CardSliderComponent {
   dataImg: any = this.apiConfig.apiConfig;
-  noPoster: any = 'assets/no-poster.png';
 
   constructor(private apiConfig: ApiConfigService, private router: Router) {}
 

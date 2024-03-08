@@ -41,7 +41,7 @@ export class MovieComponent implements OnInit {
 
     this.baseService.getReq(`/movie/${this.id}/similar`).subscribe((res) => {
       this.similarData = res.results;
-      console.log(this.similarData);
+      // console.log(this.similarData);
     });
   }
 }

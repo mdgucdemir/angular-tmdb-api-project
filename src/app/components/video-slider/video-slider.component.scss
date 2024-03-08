@@ -19,6 +19,9 @@
           background-size: cover;
           background-position: center;
           cursor: pointer;
+          &:hover {
+            opacity: 0.5;
+          }
         }
 
         .slider-title {

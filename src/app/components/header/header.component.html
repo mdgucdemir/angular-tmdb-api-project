@@ -1,12 +1,12 @@
 <mat-toolbar color="primary">
-  <mat-toolbar-row>
+  <mat-toolbar-row class="toolbar-row">
     <ul class="header-list">
       <li class="header-list-item">
         <a routerLink="/home">Home</a>
       </li>
-      <li class="header-list-item"><a routerLink="/">Movie</a></li>
-      <li class="header-list-item"><a routerLink="/">Tv Shows</a></li>
-      <li class="header-list-item"><a routerLink="/">People</a></li>
+      <li class="header-list-item"><a routerLink="/movie">Movie</a></li>
+      <li class="header-list-item"><a routerLink="/tv">Tv Shows</a></li>
+      <li class="header-list-item"><a routerLink="/person">People</a></li>
       <li class="header-list-item">
         <a mat-icon-button (click)="searchIcon()"
           ><mat-icon>search</mat-icon></a
@@ -15,6 +15,7 @@
     </ul>
   </mat-toolbar-row>
 </mat-toolbar>
+<!--  -->
 <div class="search-input" *ngIf="isInputVisible">
   <input
     matInput

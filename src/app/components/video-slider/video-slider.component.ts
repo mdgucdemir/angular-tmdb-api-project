@@ -10,7 +10,7 @@ import { DataServiceService } from 'src/app/services/data-service.service';
 })
 export class VideoSliderComponent {
   dataImg: any = this.apiConfig.apiConfig;
-  noPoster: any = 'assets/no-poster.png';
+
   isLoading: boolean = false;
 
   constructor(

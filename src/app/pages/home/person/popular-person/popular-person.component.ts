@@ -11,8 +11,6 @@ export class PopularPersonComponent implements OnInit {
   data: any = [];
   type: string = 'person';
 
-  noPoster: string = 'assets/no-poster.png';
-
   constructor(private baseService: BaseService) {}
 
   ngOnInit(): void {

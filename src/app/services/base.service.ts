@@ -11,7 +11,7 @@ export class BaseService {
 
   constructor(public http: HttpClient) {}
 
-  getReq(url: any) {
+  getReq(url: string) {
     const reqHeader = new HttpHeaders({
       'Content-Type': 'application/json',
       Authorization: `Bearer ${this.apiKey}`,
@@ -21,6 +21,17 @@ export class BaseService {
       headers: reqHeader,
     });
   }
+
+  // searchReq(url: string) {
+  //   const reqHeader = new HttpHeaders({
+  //     'Content-Type': 'application/json',
+  //     Authorization: `Bearer ${this.apiKey}`,
+  //   });
+
+  //   return this.http.get<any>(this.baseUrlUpdate('/search/multi' + url), {
+  //     headers: reqHeader,
+  //   });
+  // }
 
   baseUrlUpdate(url: string): string {
     return url.startsWith('/') ? this.baseUrl + url : url;

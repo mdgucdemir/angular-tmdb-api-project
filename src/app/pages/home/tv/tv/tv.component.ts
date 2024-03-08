@@ -32,22 +32,22 @@ export class TvComponent implements OnInit {
     this.id = this.route.snapshot.params['id'];
 
     this.items = this.dataService.getData();
-    console.log(this.items);
+    // console.log(this.items);
 
     const url = '/tv/' + this.id;
     this.baseService.getReq(url).subscribe((res) => {
       this.tv = res;
-      console.log(this.tv);
+      // console.log(this.tv);
     });
 
     this.baseService.getReq(url + '/credits').subscribe((res) => {
       this.castData = res.cast;
-      console.log('Credits: ', res);
+      // console.log('Credits: ', res);
     });
 
     this.baseService.getReq(url + '/similar').subscribe((res) => {
       this.similarData = res.results;
-      console.log('Similar: ', res);
+      // console.log('Similar: ', res);
     });
   }
 }

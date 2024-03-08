@@ -43,6 +43,9 @@ import { PersonComponent } from './pages/home/person/person/person.component';
 import { TvComponent } from './pages/home/tv/tv/tv.component';
 import { CardSliderComponent } from './components/video-slider/card-slider/card-slider.component';
 import { SimilarSliderComponent } from './components/video-slider/similar-slider/similar-slider.component';
+import { MoviePageComponent } from './pages/page/movie-page/movie-page.component';
+import { TvPageComponent } from './pages/page/tv-page/tv-page.component';
+import { PersonPageComponent } from './pages/page/person-page/person-page.component';
 
 @NgModule({
   declarations: [
@@ -68,6 +71,9 @@ import { SimilarSliderComponent } from './components/video-slider/similar-slider
     TvComponent,
     CardSliderComponent,
     SimilarSliderComponent,
+    MoviePageComponent,
+    TvPageComponent,
+    PersonPageComponent,
   ],
   imports: [
     BrowserModule,
