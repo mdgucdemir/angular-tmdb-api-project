@@ -24,7 +24,6 @@ export class SearchResultComponent implements OnInit {
   ngOnInit(): void {
     this.route.queryParams.subscribe((params) => {
       this.search = params['query'];
-      // console.log(params['q']);
 
       this.baseService
         .getReq(`/search/multi?query=${this.search}`)
@@ -32,13 +31,11 @@ export class SearchResultComponent implements OnInit {
           console.log(res.results);
           this.searchData = res.results;
           this.searchLength = res.results.length;
-          console.log(this.searchLength);
         });
     });
   }
 
   onClick(media_type: string, id: string) {
-    // console.log(media_type, id);
     this.router.navigateByUrl(`/${media_type}/${id}`);
   }
 }

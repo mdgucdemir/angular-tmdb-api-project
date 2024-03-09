@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiConfigService } from 'src/app/services/api-config.service';
 import { BaseService } from 'src/app/services/base.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-top-rated',
@@ -7,14 +9,25 @@ import { BaseService } from 'src/app/services/base.service';
   styleUrls: ['./top-rated.component.scss'],
 })
 export class TopRatedComponent implements OnInit {
-  title: string = 'top rated movies';
-  data: any = [];
-  type: string = 'movie';
-  constructor(private baseService: BaseService) {}
+  header: string = 'top rated movies top 20';
+  items: any = [];
+  dataImg: any = this.apiConfig.apiConfig;
+  dataLength: any;
+
+  constructor(
+    private baseService: BaseService,
+    private apiConfig: ApiConfigService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.baseService.getReq('/movie/top_rated').subscribe((res) => {
-      this.data = res.results;
+      this.items = res.results;
+      this.dataLength = res.results.length;
     });
+  }
+
+  onClick(id: string) {
+    this.router.navigateByUrl(`/movie/${id}`);
   }
 }

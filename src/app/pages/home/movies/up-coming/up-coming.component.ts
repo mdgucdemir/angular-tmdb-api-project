@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiConfigService } from 'src/app/services/api-config.service';
 import { BaseService } from 'src/app/services/base.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-up-coming',
@@ -7,15 +9,25 @@ import { BaseService } from 'src/app/services/base.service';
   styleUrls: ['./up-coming.component.scss'],
 })
 export class UpComingComponent implements OnInit {
-  title: string = 'up coming movies';
-  data: any = [];
-  type: string = 'movie';
+  header: string = 'up coming movies top 20';
+  items: any = [];
+  dataImg: any = this.apiConfig.apiConfig;
+  dataLength: any;
 
-  constructor(private baseService: BaseService) {}
+  constructor(
+    private baseService: BaseService,
+    private apiConfig: ApiConfigService,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {
     this.baseService.getReq('/movie/upcoming').subscribe((res) => {
-      this.data = res.results;
+      this.items = res.results;
+      this.dataLength = res.results.length;
     });
+  }
+
+  onClick(id: string) {
+    this.router.navigateByUrl(`/movie/${id}`);
   }
 }

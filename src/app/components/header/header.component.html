@@ -4,9 +4,31 @@
       <li class="header-list-item">
         <a routerLink="/home">Home</a>
       </li>
-      <li class="header-list-item"><a routerLink="/movie">Movie</a></li>
-      <li class="header-list-item"><a routerLink="/tv">Tv Shows</a></li>
-      <li class="header-list-item"><a routerLink="/person">People</a></li>
+
+      <li class="header-list-item">
+        <!-- <a routerLink="/movie">Movie</a> -->
+        <a [matMenuTriggerFor]="movies">Movies</a>
+        <mat-menu #movies="matMenu">
+          <a mat-menu-item routerLink="/movie_now_playing">Now Playing</a>
+          <a mat-menu-item routerLink="/movie_popular">Popular</a>
+          <a mat-menu-item routerLink="/movie_top_rated">Top Rated</a>
+          <a mat-menu-item routerLink="/movie_upcoming">Up Coming</a>
+        </mat-menu>
+      </li>
+
+      <li class="header-list-item">
+        <a [matMenuTriggerFor]="tvShows">Tv Shows</a>
+        <mat-menu #tvShows="matMenu">
+          <a mat-menu-item routerLink="/tv_airing-today">Airing Today</a>
+          <a mat-menu-item routerLink="/tv_on-air">On Air</a>
+          <a mat-menu-item routerLink="/tv_popular">Popular</a>
+          <a mat-menu-item routerLink="/tv_top-rated">Top Rated</a>
+        </mat-menu>
+      </li>
+
+      <li class="header-list-item">
+        <a routerLink="/popular_person">People</a>
+      </li>
       <li class="header-list-item">
         <a mat-icon-button (click)="searchIcon()"
           ><mat-icon>search</mat-icon></a

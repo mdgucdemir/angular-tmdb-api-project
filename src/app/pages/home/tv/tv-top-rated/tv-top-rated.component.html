@@ -1,5 +1,30 @@
-<app-video-slider
-  [data]="data"
-  [title]="title"
-  [type]="type"
-></app-video-slider>
+<div class="movie-page" *ngIf="dataLength">
+  <div class="movie-page-wrapper">
+    <div class="content">
+      <h2 class="content-header">{{ header }}</h2>
+      <div class="results">
+        <mat-card class="mat-card" *ngFor="let item of items">
+          <img
+            class="card-img"
+            mat-card-image
+            [src]="
+              dataImg.w500Image(
+                item.poster_path || item.backdrop_path || item.profile_path
+              )
+            "
+            [alt]="item.original_name"
+            (click)="onClick(item.id)"
+          />
+          <mat-card-content>
+            <p class="card-title">{{ item.original_name }}</p>
+            <p class="card-subtitle">
+              {{ item.first_air_date | date : "longDate" }}
+            </p>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="loading" *ngIf="!dataLength"></div>
