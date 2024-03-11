@@ -10,6 +10,7 @@ import { BaseService } from 'src/app/services/base.service';
 export class BannerComponent implements OnInit {
   bannerData: any = [];
   bannerImage: any = this.apiConfig.apiConfig;
+  bannerDataLength: any;
 
   constructor(
     private baseService: BaseService,
@@ -19,6 +20,7 @@ export class BannerComponent implements OnInit {
   ngOnInit(): void {
     this.baseService.getReq('/movie/upcoming').subscribe((res) => {
       this.bannerData = res.results;
+      this.bannerDataLength = res.results.length;
     });
   }
 }

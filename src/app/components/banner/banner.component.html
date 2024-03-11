@@ -1,4 +1,4 @@
-<div class="banner">
+<div class="banner" *ngIf="bannerDataLength">
   <swiper-container
     class="swiper-container"
     slides-per-view="1"
@@ -40,3 +40,5 @@
     </swiper-slide>
   </swiper-container>
 </div>
+
+<div class="loading" *ngIf="!bannerDataLength"></div>

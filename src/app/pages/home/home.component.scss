@@ -1,0 +1,38 @@
+.discover {
+  margin: 6rem;
+
+  &-wrapper {
+    width: 100%;
+    height: 40vh;
+
+    position: relative;
+    background-position: center;
+    background-size: contain;
+    background-repeat: repeat;
+
+    &-shadow {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to right,
+        rgba(31.5, 31.5, 31.5, 0.84) 100%,
+        rgba(31.5, 31.5, 31.5, 0.84) 50%,
+        rgba(31.5, 31.5, 31.5, 0.84) 100%
+      );
+      .discover-header {
+        padding: 40px;
+
+        display: flex;
+        align-items: center;
+
+        h2 {
+          text-transform: capitalize;
+          color: #fff;
+          font-size: 1.5rem;
+          font-weight: 500;
+          margin-right: 20px;
+        }
+      }
+    }
+  }
+}

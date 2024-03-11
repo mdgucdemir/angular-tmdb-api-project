@@ -25,6 +25,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatTabsModule } from '@angular/material/tabs';
 
 //
 import { BannerComponent } from './components/banner/banner.component';
@@ -48,7 +49,6 @@ import { SimilarSliderComponent } from './components/video-slider/similar-slider
   declarations: [
     AppComponent,
     HomeComponent,
-
     SearchResultComponent,
     HeaderComponent,
     FooterComponent,
@@ -82,6 +82,7 @@ import { SimilarSliderComponent } from './components/video-slider/similar-slider
     MatInputModule,
     FormsModule,
     MatMenuModule,
+    MatTabsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
