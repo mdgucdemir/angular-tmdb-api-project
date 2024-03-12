@@ -1,22 +1,5 @@
 <div class="home">
   <app-banner></app-banner>
-
-  <div class="discover">
-    <div
-      class="discover-wrapper"
-      [ngStyle]="{
-        'background-image':
-          'url(' + bannerImage.originalImage(backdropPath) + ')'
-      }"
-    >
-      <div class="discover-wrapper-shadow">
-        <div class="discover-header">
-          <h2>discover</h2>
-          <div class="selector">
-            <!-- swipper gelecek buraya -->
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+  <app-video-slider title="discover" type="tv"></app-video-slider>
+  <app-video-slider title="discover" type="movie"></app-video-slider>
 </div>

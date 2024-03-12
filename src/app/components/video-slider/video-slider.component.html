@@ -1,6 +1,6 @@
 <div class="movie-list">
   <div class="movie-list-wrapper">
-    <div class="movie-list-header">{{ title }}</div>
+    <div class="movie-list-header">{{ title + " " + type }}</div>
     <div class="movie-list-content">
       <swiper-container slides-per-view="11" speed="500" navigation="true">
         <swiper-slide *ngFor="let item of data" class="swiper-slide">
