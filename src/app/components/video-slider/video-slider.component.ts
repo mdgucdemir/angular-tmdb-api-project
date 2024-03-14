@@ -14,8 +14,6 @@ export class VideoSliderComponent implements OnInit {
   dataImg: any = this.apiConfig.apiConfig;
   data: any[] = [];
 
-  isLoading: boolean = false;
-
   constructor(
     private apiConfig: ApiConfigService,
     private router: Router,
